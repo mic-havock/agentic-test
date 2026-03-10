@@ -1,0 +1,40 @@
+name: Daily Insight Auto-Logger
+
+on:
+  schedule:
+    - cron: '0 13 * * *' # Runs at 1 PM UTC daily
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  log-daily-insight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run logger script
+        run: python logger.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add journal.md
+
+          # Use the current date for the commit message
+          DATE=$(date +'%Y-%m-%d')
+
+          # Commit only if there are changes
+          git diff --quiet && git diff --staged --quiet || git commit -m "Daily Update: $DATE"
+          git push
