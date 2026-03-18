@@ -1,7 +1,6 @@
 import requests
 import datetime
 import os
-import random
 
 def get_quote():
     try:
@@ -27,12 +26,6 @@ def get_weather():
         return "Could not fetch weather today."
 
 def main():
-    # 50% chance to run
-    should_run = random.random() < 0.5
-    if not should_run:
-        print("Random skip decided. Not logging this time.")
-        return
-
     date_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     quote = get_quote()
     weather = get_weather()
