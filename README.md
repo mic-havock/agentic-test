@@ -4,7 +4,7 @@ This project automates daily journal entries by fetching a random programming qu
 
 ## How it works
 The `logger.py` script makes API calls to ZenQuotes and wttr.in. It formats the data and appends it to `journal.md` with the current date.
-A GitHub Actions workflow (`.github/workflows/daily.yml`) is scheduled to run this script every 2 hours, 12 times a day. It checks out the repository, installs the required `requests` library, runs the script, and pushes the updated `journal.md` back to the repository.
+A GitHub Actions workflow (`.github/workflows/daily.yml`) is scheduled to run this script every 8 hours, 3 times a day. It checks out the repository, installs the required `requests` library, runs the script, and pushes the updated `journal.md` back to the repository.
 
 ## Local Deployment / Running Manually
 
@@ -35,5 +35,5 @@ A GitHub Actions workflow (`.github/workflows/daily.yml`) is scheduled to run th
 
 1. **Push to GitHub:** Ensure your code (`logger.py`, `requirements.txt`, `.github/workflows/daily.yml`, and `journal.md`) is pushed to your GitHub repository.
 2. **Workflow Permissions:** Go to your repository settings on GitHub: Settings -> Actions -> General -> Workflow permissions. Ensure "Read and write permissions" is selected. This allows the action to commit changes back to the repository.
-3. **Automatic Execution:** The workflow will automatically run every 2 hours based on the cron schedule in `.github/workflows/daily.yml`.
+3. **Automatic Execution:** The workflow will automatically run every 8 hours based on the cron schedule in `.github/workflows/daily.yml`.
 4. **Manual Execution:** You can also manually trigger the workflow from the "Actions" tab in your GitHub repository. Select the "Daily Insight Auto-Logger" workflow and click "Run workflow".

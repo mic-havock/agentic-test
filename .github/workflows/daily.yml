@@ -2,8 +2,8 @@ name: Daily Insight Auto-Logger
 
 on:
   schedule:
-    # Run every 2 hours, 12 times a day
-    - cron: '0 */2 * * *'
+    # Run every 8 hours, 3 times a day
+    - cron: '0 */8 * * *'
   workflow_dispatch: # Allows manual triggering
 
 jobs:
