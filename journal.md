@@ -1916,3 +1916,9 @@
 
 **Weather:** Seattle: ☀️  +74°F
 
+## 2026-06-18 11:47:54
+
+**Quote:** "A simple rule in dealing with those who are hard to get along with is to remember that this person is striving to assert his superiority; and you must deal with him from that point of view." - Alfred Adler
+
+**Weather:** Seattle: ☀️  +57°F
+
