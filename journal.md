@@ -2588,3 +2588,9 @@
 
 **Weather:** Seattle: ☀️  +66°F
 
+## 2026-07-25 16:52:30
+
+**Quote:** "We may not be responsible for the world that created our minds, but we can take responsibility for the mind with which we create our world." - Gabor Mate
+
+**Weather:** Seattle: 🌤️  +62°F
+
