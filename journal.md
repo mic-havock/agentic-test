@@ -3374,3 +3374,9 @@
 
 **Weather:** Seattle: ☀️  +54°F
 
+## 2026-09-08 19:13:58
+
+**Quote:** "To be in harmony with the wholeness of things is not to have anxiety over imperfections." - Dogen
+
+**Weather:** Seattle: ☀️  +67°F
+
